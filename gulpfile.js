@@ -22,7 +22,7 @@ const gulp = require("gulp"),
 
 let dist = "./dist/",
 	src = "./src/",
-	prefix = 'tmpl-hh__';
+	prefix = 'tmpl__';
 
 let getTemplateType = () => isPage ? "page" : "vacancy";
 
