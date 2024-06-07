@@ -1,0 +1,111 @@
+extends ./pug/layout
+
+block content
+	<!-- START HEADER -->
+	.section.header 
+		.container 
+			.header__inner 
+				.header__logo 
+					img(src="../images/logo.svg")
+				.header__menu 
+					.header__nav.nav
+						a.nav__item.anchor(href="#main") Главная
+						a.nav__item.anchor(href="#about") О студии
+						a.nav__item.anchor(href="#career") Услуги
+						a.nav__item.anchor(href="#contacts") Контакты
+					+nav-btn
+					a.header__insta-link(href="" target="_blank") 
+						img(src="../images/insta-icon.svg")
+					a.header__btn.anchor(href="#contacts") Задать вопрос
+	<!-- END HEADER -->
+
+	<!-- START FIRST-SCREEN -->
+	.section.first-screen#main
+		.first-screen__wrapper.section__bg 
+			.container 
+				.first-screen__inner 
+					.first-screen__content 
+						.first-screen__heading Студия вышивки
+						.first-screen__title Компьютерная машинная вышивка от нашей студии
+						.first-screen__text Эксклюзивная вышивка на текстильной продукции любой сложности. Уникальные дизайнерские изделия 
+						button.first-screen__btn Сделать заказ
+					.first-screen__img 
+						img(src="../images/fs-img.jpg")
+	<!-- END FIRST-SCREEN -->
+
+	<!-- START ADVANTAGES -->
+	.section.advantages 
+		.container 
+			.advantages__inner 
+				.advantages__card 
+					.advantages__card-title 
+						.advantages__card-icon
+							img(src="../images/a1.svg")
+						p Профессионально
+					.advantages__card-text 
+						p У нас огромный опыт в области вышивки. Стажировки и обучение проходим за рубежом. Используем качественные расходные материалы
+				.advantages__card 
+					.advantages__card-title 
+						.advantages__card-icon
+							img(src="../images/a2.svg")
+						p Быстро
+					.advantages__card-text 
+						p Готовность до одного часа, мы ценим свое <br> и ваше время. <br> Доставка по всему миру
+				.advantages__card 
+					.advantages__card-title 
+						.advantages__card-icon
+							img(src="../images/a3.svg")
+						p Качественно
+					.advantages__card-text 
+						p Мы делаем вышивку качеством люкс используя современные материалы и новейшее промышленное оборудование
+	<!-- END ADVANTAGES -->
+
+	<!-- START ABOUT -->
+	.section.section--medium-pt.about#about
+		.container 
+			.about__inner.section__bg
+				.about__img 
+					img(src="../images/about.jpg")
+				.about__content 
+					.title.title--mb-short О студии
+					.about__text 
+						p Студия вышивки — это мастерская творчества, где профессиональный подход сочетается с высочайшим качеством в искусстве вышивки. Мы уделяем особое внимание каждому клиенту, создавая индивидуальные решения и воплощая ваши идеи. Наша студия — это место, где технологии сливаются с искусством, и каждый проект превращается в уникальный шедевр.
+						p Мы активно развиваемся и внедряем новые технологии. Только у нас вы сможете воспользоваться этими уникальными услугами.
+					button.about__btn Узнать больше
+	<!-- END ABOUT -->
+
+	<!-- START FOOTER -->
+	.section.footer#contacts 
+		.container 
+			.footer__card 
+				.footer__contacts 
+					.title.title--mb-long Контакты
+					.footer__contacts-items
+						.footer__contacts-item
+							.footer__contacts-item-heading Телефон
+							a.footer__contacts-item-text(href="tel:77778886655") +7 (777) 888 66 55
+						.footer__contacts-item
+							.footer__contacts-item-heading Почта
+							a.footer__contacts-item-text(href="mailto:testalm@yandex.ru") testalm@yandex.ru
+						.footer__contacts-item
+							.footer__contacts-item-heading Адрес
+							.footer__contacts-item-text Казахстан, г. Алматы, <br> ул.Абая 23
+				.footer__form-wrapper
+					.footer__form-title Получите консультацию
+					form.footer__form#myForm(action="#" method="post")
+						input.footer__form-input-name(type="text" name="name" placeholder="Имя" required)
+						.footer__form-container
+							input.footer__form-input(type="text" name="phone" placeholder="+7 (777) 777-77-77" required)
+							input.footer__form-input(type="email" name="email" placeholder="E-mail" required)
+						textarea.footer__form-text-area(name="question" placeholder="Ваш вопрос" required)
+						.footer__form-text
+							| Нажимая на кнопку «Задать вопрос» вы соглашаетесь на обработку персональных данных в соответствии с 
+							a.footer__form-text-link(href="#" target="_blank") Политикой конфиденциальности
+						button.footer__form-btn(type="submit") Задать вопрос
+		.footer__wrapper.section__bg 
+			.footer__links 
+				a.footer__links-insta(href="#" target="_blank")
+					img(src="../images/insta-icon.svg")
+				.footer__links-text © ТОО "STUDIYA VYSHIVKI"
+				.footer__links-secure Все права защищены
+	<!-- END FOOTER -->
